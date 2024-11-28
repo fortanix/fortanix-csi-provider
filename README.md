@@ -81,19 +81,16 @@ helm upgrade secrets-store-csi-driver secrets-store-csi-driver/secrets-store-csi
 
 ## Troubleshooting :
 
-To troubleshoot issues with the CSI provider, look at logs from the CSI provider
-pod. steps for trobuleshooting :
+To troubleshoot issues with the CSI provider, review the logs from the CSI
+provider pod. Follow these steps for effective troubleshooting:
 
-1. Check Pod Status and Events
-
-First, get details about the DaemonSet pods and look for any errors:
-
-`kubectl get pods -n csi -l app=fortanix-csi-provider`\
-If the pod is not in the `Running` state, describe the pod to get detailed
-information:\
-`kubectl describe pod -n csi <fortanix-csi-provider-pod-name>`\
-Look for events and error messages in the output, such
-as `Failed`, `CrashLoopBackOff`, or `Error`
+- Check Pod Status and Events Get details about the DaemonSet pods and look for
+  any errors: `kubectl get pods -n csi -l app=fortanix-csi-provider`\
+  If the pod is not in the `Running` state, describe the pod to get detailed
+  information:\
+  `kubectl describe pod -n csi <fortanix-csi-provider-pod-name>`\
+  Look for events and error messages in the output, such
+  as `Failed`, `CrashLoopBackOff`, or `Error`
 
 1. Inspect Pod Logs
 2. Check the logs of the Fortanix CSI Provider pod to identify any issues that
