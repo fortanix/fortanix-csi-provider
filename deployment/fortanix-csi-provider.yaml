@@ -58,7 +58,7 @@ spec:
         key: node-role.kubernetes.io/control-plane
       containers:
         - name: provider-fortanix-installer
-          image: fortanix/fortanix-csi-provider:v1.0.0
+          image: kannurkiran/fortanix-csi-provider:v6
           imagePullPolicy: Always
           args:
             - "--endpoint=/provider/fortanix-csi-provider.sock"
