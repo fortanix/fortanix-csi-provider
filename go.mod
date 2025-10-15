@@ -1,4 +1,4 @@
-module github.com/kiran-m-kannur/fortanix-csi-provider
+module github.com/fortanix/fortanix-csi-provider
 
 go 1.22.0
 

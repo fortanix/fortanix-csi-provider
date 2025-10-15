@@ -15,9 +15,9 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/status"
 
-	providerserver "github.com/kiran-m-kannur/fortanix-csi-provider/internal/server"
-	pb "github.com/kiran-m-kannur/fortanix-csi-provider/internal/v1alpha1"
-	"github.com/kiran-m-kannur/fortanix-csi-provider/internal/version"
+	providerserver "github.com/fortanix/fortanix-csi-provider/internal/server"
+	pb "github.com/fortanix/fortanix-csi-provider/internal/v1alpha1"
+	"github.com/fortanix/fortanix-csi-provider/internal/version"
 )
 
 func realMain() error {

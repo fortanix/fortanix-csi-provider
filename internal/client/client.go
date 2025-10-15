@@ -7,7 +7,7 @@ import (
 	"github.com/fortanix/sdkms-client-go/sdkms"
 	"github.com/pkg/errors"
 
-	"github.com/kiran-m-kannur/fortanix-csi-provider/internal/config"
+	"github.com/fortanix/fortanix-csi-provider/internal/config"
 )
 
 type SecretClient struct {

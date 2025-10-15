@@ -12,9 +12,9 @@ import (
 
 	"github.com/fortanix/sdkms-client-go/sdkms"
 
-	"github.com/kiran-m-kannur/fortanix-csi-provider/internal/client"
-	"github.com/kiran-m-kannur/fortanix-csi-provider/internal/config"
-	pb "github.com/kiran-m-kannur/fortanix-csi-provider/internal/v1alpha1"
+	"github.com/fortanix/fortanix-csi-provider/internal/client"
+	"github.com/fortanix/fortanix-csi-provider/internal/config"
+	pb "github.com/fortanix/fortanix-csi-provider/internal/v1alpha1"
 )
 
 type provider struct{}

@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/kiran-m-kannur/fortanix-csi-provider/internal/config"
-	provider "github.com/kiran-m-kannur/fortanix-csi-provider/internal/provider"
-	pb "github.com/kiran-m-kannur/fortanix-csi-provider/internal/v1alpha1"
-	"github.com/kiran-m-kannur/fortanix-csi-provider/internal/version"
+	"github.com/fortanix/fortanix-csi-provider/internal/config"
+	provider "github.com/fortanix/fortanix-csi-provider/internal/provider"
+	pb "github.com/fortanix/fortanix-csi-provider/internal/v1alpha1"
+	"github.com/fortanix/fortanix-csi-provider/internal/version"
 )
 
 var _ pb.CSIDriverProviderServer = (*Server)(nil)
