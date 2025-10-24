@@ -88,15 +88,12 @@ func parseParameters(parametersStr string) (Parameters, error) {
 	}
 
 	var parameters Parameters
-	parameters.DsmApiKey = params["dsmApikey"]
+	parameters.DsmApiKey = os.Getenv("FORTANIX_API_KEY")
 	parameters.DsmEndpoint = params["dsmEndpoint"]
 	parameters.PodName = params["csi.storage.k8s.io/pod.name"]
 	parameters.UID = params["csi.storage.k8s.io/pod.uid"]
 	parameters.Namespace = params["csi.storage.k8s.io/pod.namespace"]
 	parameters.ServiceAccountName = params["csi.storage.k8s.io/serviceAccount.name"]
-	if parameters.DsmApiKey == "" {
-		parameters.DsmApiKey = os.Getenv("FORTANIX_API_KEY")
-	}
 	if parameters.DsmEndpoint == "" {
 		parameters.DsmEndpoint = os.Getenv("FORTANIX_DSM_ENDPOINT")
 	}
@@ -119,10 +116,10 @@ func (c *Config) validate() error {
 		return errors.New("missing target path field")
 	}
 	if c.Parameters.DsmApiKey == "" {
-		return errors.New("missing 'api key' in SecretProviderClass definition")
+		return errors.New("missing API key - must be set via FORTANIX_API_KEY environment variable")
 	}
 	if c.Parameters.DsmEndpoint == "" {
-		return errors.New("missing 'Dsm Endpoint' in SecretProviderClass definition")
+		return errors.New("missing DSM endpoint")
 	}
 	if len(c.Parameters.Secrets) == 0 {
 		return errors.New("no secrets configured - the provider will not read any secret material")
